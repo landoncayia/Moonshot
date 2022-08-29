@@ -23,7 +23,7 @@ struct ContentView: View {
                     ListLayout(astronauts: astronauts, missions: missions)
                 }
             }
-            .navigationTitle("Moonshot")
+            .navigationTitle(Text("Moonshot").accessibilityLabel("Moon shot"))
             .background(.darkBackground)
             .preferredColorScheme(.dark)
             .toolbar {
@@ -40,6 +40,7 @@ struct ContentView: View {
                             .foregroundColor(.white)
                     }
                 }
+                .accessibilityLabel("Change to \(showingGrid ? "list view" : "grid view")")
             }
         }
     }
